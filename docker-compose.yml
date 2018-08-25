@@ -5,11 +5,9 @@ services:
         environment:
             - DOMAINS
             - WEBMASTER_MAIL
-            - STAGING=yes
         ports:
             - "80:80"
             - "443:443"
         volumes:
-            - "./sites-available:/etc/apache2/sites-available"
-            - "./public_html:/var/www/html"
+            - "./sites-enabled:/etc/apache2/sites-enabled"
 
